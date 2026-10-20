@@ -1,6 +1,6 @@
 {
   "name": "@fuhua-0623/collage-vision-qc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detect hallucinated or inconsistent elements in a candidate image by comparing it against a reference in a single side-by-side collage.",
   "license": "MIT",
   "author": "Fuhua-0623",
