@@ -1,0 +1,63 @@
+{
+  "name": "@fuhua-0623/collage-vision-qc",
+  "version": "0.1.0",
+  "description": "Detect hallucinated or inconsistent elements in a candidate image by comparing it against a reference in a single side-by-side collage.",
+  "license": "MIT",
+  "author": "Fuhua-0623",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fuhua-0623/collage-vision-qc.git"
+  },
+  "homepage": "https://github.com/Fuhua-0623/collage-vision-qc#readme",
+  "bugs": {
+    "url": "https://github.com/Fuhua-0623/collage-vision-qc/issues"
+  },
+  "keywords": [
+    "vision",
+    "image-qc",
+    "image-quality",
+    "hallucination",
+    "multimodal",
+    "llm",
+    "collage",
+    "openai-compatible",
+    "sharp",
+    "ai-generated-images"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/qc.test.mjs test/collage.test.mjs test/image.test.mjs test/parse.test.mjs test/options.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
